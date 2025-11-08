@@ -23,16 +23,17 @@ Depuis le terminal (cmd, PowerShell, bash, shell n'importe lequel) :
 
 ```
 TpComplexit-/
-├── TP0/                    # Fichiers source C
-│   ├── Random100.c
-│   ├── Random1000.c
-│   ├── Test-1.c
-│   ├── Test-2.c
-│   └── Test-3.c
-├── Docs/                   # Documentation et données
-│   ├── primes10.txt        # Fichier de nombres premiers
-│   └── TP 0 Creation de donnees de tests.pdf
-├── dist/                   # Exécutables compilés
-├── compile.sh              # Script de compilation
-└── GuideExecution.md       # Ce fichier
+└── Tp0/                    # Dossier parent contenant tout le TP0
+	├── src/                # Fichiers source C
+	│   ├── Random100.c
+	│   ├── Random1000.c
+	│   ├── Test-1.c
+	│   ├── Test-2.c
+	│   └── Test-3.c
+	├── Docs/               # Documentation et données
+	│   ├── primes10.txt    # Fichier de nombres premiers
+	│   └── TP 0 Creation de donnees de tests.pdf
+	├── dist/               # Exécutables compilés
+	├── compile.sh          # Script de compilation
+	└── GuideExecution.md   # Ce fichier
 ```
