@@ -1,9 +1,6 @@
-// Random100.c - Simple program to extract 100 prime numbers from a file
-
 #include <stdio.h>
 #include <stdlib.h>
-
-// Simple function to check if a number is prime
+ 
 int is_prime(int n) {
     if (n < 2) return 0;
     if (n == 2) return 1;
@@ -14,7 +11,8 @@ int is_prime(int n) {
     }
     return 1;
 }
-// pass the primes10.txt hna as first argument
+
+
 int main(int argc, char **argv) {
     if (argc < 2) {
         printf("Usage: %s primes10.txt\n", argv[0]);
@@ -28,14 +26,14 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    // declaration array 
+   
     int primes[100];
     int count = 0;
     int number;
 
-    
+    // Read numbers from file and keep only primes in range [1000, 1000000]
     while (count < 100 && fscanf(file, "%d", &number) == 1) {
-        if (is_prime(number)) {
+        if (number >= 1000 && number <= 1000000 && is_prime(number)) {
             primes[count] = number;
             count++;
         }
@@ -43,8 +41,8 @@ int main(int argc, char **argv) {
 
     fclose(file);
 
-    // Print all prime numbers found
-    printf("Found %d prime numbers:\n", count);
+    // Print all prime numbers ta3 array
+    printf("Found %d prime numbers in range [1000, 1000000]:\n", count);
     for (int i = 0; i < count; i++) {
         printf("%d\n", primes[i]);
     }
